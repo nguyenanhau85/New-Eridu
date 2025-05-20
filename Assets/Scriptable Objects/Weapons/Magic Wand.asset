@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e95f22d92e94bfb87f5f70bf1997de7, type: 3}
+  m_Name: Magic Wand
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: c1f898d379770134b933aec16906d65e, type: 3}
+  prefab: {fileID: 8742306964795184544, guid: e3df6ebb3ac1641429053cffde382d8c, type: 3}
+  baseDescription: Fires at the nearest enemy
+  levelData:
+  - damage: 10
+    cooldown: 1.2
+    area: 1
+    speed: 10
+    duration: 0
+    knockback: 1
+    projectileInterval: 0.15
+    amount: 1
+    pierce: 0
+  - damage: 12
+    cooldown: 1
+    area: 1
+    speed: 10
+    duration: 0
+    knockback: 1
+    projectileInterval: 0.15
+    amount: 2
+    pierce: 0
+  - damage: 12
+    cooldown: 1
+    area: 1
+    speed: 10
+    duration: 0
+    knockback: 1
+    projectileInterval: 0.1
+    amount: 3
+    pierce: 0

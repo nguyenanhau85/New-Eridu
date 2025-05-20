@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34385ee4f1bf46d79c6ef4a86840dc53, type: 3}
+  m_Name: Bracer
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: 172d6c0deece1e14389c245f3877c6ed, type: 3}
+  prefab: {fileID: 3133912357716758111, guid: eaf6fc8ab46302a4ab2029d4745adc2c, type: 3}
+  baseDescription: Increases projectiles speed by 10%
+  levelData:
+  - maxHealth: 0
+    recovery: 0
+    armor: 0
+    moveSpeed: 0
+    growth: 0
+    attractionRange: 0
+    might: 0
+    area: 0
+    speed: 10
+    amount: 0
+    cooldown: 0
+  - maxHealth: 0
+    recovery: 0
+    armor: 0
+    moveSpeed: 0
+    growth: 0
+    attractionRange: 0
+    might: 0
+    area: 0
+    speed: 20
+    amount: 0
+    cooldown: 0
+  - maxHealth: 0
+    recovery: 0
+    armor: 0
+    moveSpeed: 0
+    growth: 0
+    attractionRange: 0
+    might: 0
+    area: 0
+    speed: 30
+    amount: 0
+    cooldown: 0
+  - maxHealth: 0
+    recovery: 0
+    armor: 0
+    moveSpeed: 0
+    growth: 0
+    attractionRange: 0
+    might: 0
+    area: 0
+    speed: 40
+    amount: 0
+    cooldown: 0
+  - maxHealth: 0
+    recovery: 0
+    armor: 0
+    moveSpeed: 0
+    growth: 0
+    attractionRange: 0
+    might: 0
+    area: 0
+    speed: 50
+    amount: 0
+    cooldown: 0
+  levelMax: 5
