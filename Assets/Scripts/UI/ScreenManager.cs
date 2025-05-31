@@ -2,8 +2,9 @@
 
 public class ScreenManager : MonoBehaviour
 {
-    public GameObject homeScreen, gameScreen, pauseScreen, levelUpScreen, endScreen, leaderboardScreen, mainMenu;
+    public GameObject homeScreen, gameScreen, pauseScreen, levelUpScreen, endScreen, leaderboardScreen, mainMenu, tutorialScreen, settingScreen;
 
+    [SerializeField] private GameObject _imgBacckground, _playerStats;
     void Awake()
     {
         mainMenu.SetActive(true);
@@ -13,6 +14,8 @@ public class ScreenManager : MonoBehaviour
         levelUpScreen.SetActive(false);
         endScreen.SetActive(false);
         leaderboardScreen.SetActive(false);
+        tutorialScreen.SetActive(false);
+        settingScreen.SetActive(false);
     }
 
     void Start()
@@ -26,6 +29,8 @@ public class ScreenManager : MonoBehaviour
         ExperienceSystem.OnLevelUp += ShowLevelUpScreen;
         LevelUpChoiceUI.UpgradeChosen += ShowGameScreen;
         GameStateManager.OnLeaderboard += ShowLeaderboard;
+        GameStateManager.OnTutorial += ShowTutorialScreen;
+        GameStateManager.OnSettings += ShowSettingsScreen;
     }
 
     void OnDestroy()
@@ -38,6 +43,8 @@ public class ScreenManager : MonoBehaviour
         ExperienceSystem.OnLevelUp -= ShowLevelUpScreen;
         LevelUpChoiceUI.UpgradeChosen -= ShowGameScreen;
         GameStateManager.OnLeaderboard -= ShowLeaderboard;
+        GameStateManager.OnTutorial -= ShowTutorialScreen;
+        GameStateManager.OnSettings -= ShowSettingsScreen;
     }
 
     void ShowMainMenuScreen()
@@ -47,6 +54,11 @@ public class ScreenManager : MonoBehaviour
         endScreen.SetActive(false);
         leaderboardScreen.SetActive(false);
         mainMenu.SetActive(true);
+        _imgBacckground.SetActive(true);
+        _playerStats.SetActive(false);
+        tutorialScreen.SetActive(false);
+        settingScreen.SetActive(false);
+        pauseScreen.SetActive(false);
     }
 
     void ShowGameScreen()
@@ -69,6 +81,8 @@ public class ScreenManager : MonoBehaviour
         homeScreen.SetActive(true);
         endScreen.SetActive(false);
         leaderboardScreen.SetActive(false);
+        _imgBacckground.SetActive(false);
+        _playerStats.SetActive(true);
     }
 
     void ShowPauseScreen()
@@ -89,5 +103,22 @@ public class ScreenManager : MonoBehaviour
         homeScreen.SetActive(false);
         endScreen.SetActive(false);
         leaderboardScreen.SetActive(true);
+    }
+    void ShowTutorialScreen()
+    {
+        mainMenu.SetActive(false);
+        homeScreen.SetActive(false);
+        endScreen.SetActive(false);
+        leaderboardScreen.SetActive(false);
+        tutorialScreen.SetActive(true);
+
+    }
+    void ShowSettingsScreen()
+    {
+        mainMenu.SetActive(false);
+        homeScreen.SetActive(false);
+        endScreen.SetActive(false);
+        leaderboardScreen.SetActive(false);
+        settingScreen.SetActive(true);
     }
 }

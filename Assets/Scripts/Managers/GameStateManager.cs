@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameStateManager : MonoBehaviour
 {
-    public static Action OnHome, OnPlaying, OnGameOver, OnLeaderboard, OnSettings, OnMainMenu;
+    public static Action OnHome, OnPlaying, OnGameOver, OnLeaderboard, OnSettings, OnMainMenu, OnTutorial;
     public static Action<GameState> OnStateChange;
     public static GameState CurrentState { get; private set; }
 
@@ -51,7 +51,9 @@ public class GameStateManager : MonoBehaviour
             case GameState.MainMenu:
                 OnMainMenu?.Invoke();
                 break;
-
+            case GameState.Tutorial:
+                OnTutorial?.Invoke();
+                break;
         }
     }
 }
@@ -65,4 +67,5 @@ public enum GameState
     Leaderboard,
     Settings, //Them state moi
     MainMenu,
+    Tutorial,
 }

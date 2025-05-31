@@ -19,6 +19,11 @@ public class AxeProjectileController : MonoBehaviour, IPoolable
     Vector2 _initialDirection;
     GameObject _attacker;
 
+    private void OnEnable()
+    {
+        AudioManager.Instance.PlayWeaponSFX(WeaponSFX.Axe);
+    }
+
     void Update()
     {
         _currentAirTime += Time.deltaTime;

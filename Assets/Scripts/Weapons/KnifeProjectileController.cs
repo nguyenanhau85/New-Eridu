@@ -7,6 +7,11 @@ public class KnifeProjectileController : MonoBehaviour
     float _knockback;
     GameObject _attacker;
 
+    private void OnEnable()
+    {
+        AudioManager.Instance.PlayWeaponSFX(WeaponSFX.Knife);
+    }
+
     void Update() => transform.position += transform.up * (_moveSpeed * Time.deltaTime);
 
     void OnTriggerEnter2D(Collider2D other)

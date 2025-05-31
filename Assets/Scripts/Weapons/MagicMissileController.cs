@@ -10,6 +10,12 @@ public class MagicMissileController : MonoBehaviour, IPoolable
     Vector3 _direction;
     bool _hasHit;
 
+
+    private void OnEnable()
+    {
+        AudioManager.Instance.PlayWeaponSFX(WeaponSFX.Magic);
+    }
+
     void Update()
     {
         if (_hasHit) return;

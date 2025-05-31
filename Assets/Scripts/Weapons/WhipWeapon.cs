@@ -58,6 +58,7 @@ public class WhipWeapon : Weapon
     {
         // play the particles
         leftWhipParticles.Play();
+        AudioManager.Instance.PlayWeaponSFX(WeaponSFX.Whip);
         DOVirtual.DelayedCall(delayRightParticle, () => rightWhipParticles.Play());
 
         // small delay before activating the triggers

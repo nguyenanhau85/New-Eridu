@@ -17,6 +17,11 @@ public class LevelUpChoiceUI : MonoBehaviour
 
     void Awake() => _button = GetComponent<Button>();
 
+    private void OnEnable()
+    {
+        transform.localScale = Vector3.one;
+    }
+
     public void SetData(UpgradableSO upgradable, int level)
     {
         nameTMP.text = upgradable.name;
